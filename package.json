@@ -1,13 +1,10 @@
 {
   "name": "6-7-connecting-to-postgres",
   "version": "1.0.0",
-  "main": "server.js",
   "scripts": {
-    "db:queries": "node db/queries.js"
+    "db:start": "node db/pool.js"
   },
   "dependencies": {
-    "dotenv": "^16.0.0",
-    "express": "^4.18.0",
     "pg": "^8.11.0"
   }
 }

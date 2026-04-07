@@ -4,21 +4,27 @@ Lecture code for [Connecting to Postgres with `pg`](https://marcylabschool.gitbo
 
 ## Setup
 
+
 ```sh
 # Install dependencies
 npm install
+```
 
-# Copy the environment template and fill in your values
-cp .env.template .env
+Create the database (run once)
 
-# Create the database (run once)
+```sh
 createdb users_db           # Mac
-# sudo -u postgres createdb users_db   # Windows/WSL
+sudo -u postgres createdb users_db   # Windows/WSL
+```
+
+Seed the database
+
+```sh
+psql -f seed.sql                    # Mac
+sudo -u postgres psql -f seed.sql   # Windows/WSL
 ```
 
 ## Files
 
 - `db/pool.js` — creates and exports the connection pool
-- `db/seed.js` — creates tables if they don't exist and inserts seed data
-- `db/queries.js` — CRUD operations using `pool.query()`
-- `.env.template` — environment variable template
+- `db/seed.sql` — creates tables if they don't exist and inserts seed data
