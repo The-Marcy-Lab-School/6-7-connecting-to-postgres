@@ -14,17 +14,11 @@ cp .env.template .env
 # Create the database (run once)
 createdb users_db           # Mac
 # sudo -u postgres createdb users_db   # Windows/WSL
-
-# Initialize the schema
-npm run db:init
-
-# Start the server
-npm start
 ```
 
 ## Files
 
 - `db/pool.js` — creates and exports the connection pool
-- `db/init.js` — creates tables if they don't exist (`npm run db:init`)
-- `models/userModel.js` — CRUD model using `pool.query()`
+- `db/seed.js` — creates tables if they don't exist and inserts seed data
+- `db/queries.js` — CRUD operations using `pool.query()`
 - `.env.template` — environment variable template
