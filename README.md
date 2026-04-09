@@ -20,8 +20,8 @@ sudo -u postgres createdb users_db   # Windows/WSL
 Seed the database
 
 ```sh
-psql -f seed.sql                    # Mac
-sudo -u postgres psql -f seed.sql   # Windows/WSL
+psql -f db/seed.sql                    # Mac
+sudo -u postgres psql -f db/seed.sql   # Windows/WSL
 ```
 
 ## Files
